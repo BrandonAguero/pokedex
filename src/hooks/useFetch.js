@@ -3,19 +3,21 @@ import { useState } from "react";
 
 const useFetch = (baseUrl) => {
   const [infoApi, setInfoApi] = useState();
+  const [hasError, setHasError] = useState(false);
 
   const getApi = () => {
     axios
       .get(baseUrl)
       .then((res) => {
         setInfoApi(res.data);
+        setHasError(false);
       })
       .catch((err) => {
-        console.error(err);
+        setHasError(true);
       });
   };
 
-  return [infoApi, getApi];
+  return [infoApi, getApi, hasError, setInfoApi];
 };
 
 export default useFetch;

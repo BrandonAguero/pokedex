@@ -1,11 +1,14 @@
 import { useState } from "react";
 import ShowPokemonsFilter from "./ShowPokemonsFilter.jsx";
+import { useDispatch } from "react-redux";
+import { setFilterNamePokemonG } from "../../store/slices/filterNamePokemon.slice.js";
 
 const SearchPokemon = ({ infoResults }) => {
+  const dispatch = useDispatch();
+
   const [namesFilter, setNamesFilter] = useState();
   const [chosenName, setChosenName] = useState("");
-
-  console.log(namesFilter);
+  const [foundPokemon, setFoundPokemon] = useState();
 
   const valueNamePokemon = (e) => {
     const searchInputValue = e.target.value.trim().toLowerCase();
@@ -23,12 +26,17 @@ const SearchPokemon = ({ infoResults }) => {
 
   const handleCaptureName = (e) => {
     const valueClickUser = e.target.textContent;
+    const resultPokemon = namesFilter.filter(
+      (pokemon) => pokemon.name === valueClickUser
+    );
+    setFoundPokemon(resultPokemon);
     setChosenName(valueClickUser);
     setNamesFilter([]);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(setFilterNamePokemonG(foundPokemon));
   };
 
   return (
