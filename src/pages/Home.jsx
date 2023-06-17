@@ -18,35 +18,47 @@ const Home = () => {
 
   return (
     <>
-      <header className="w-nine ">
-        <img
-          src="/src/assets/png/logo-main.png"
-          alt="Imagen referencial sobre la aplicación"
-        />
-      </header>
-      <main className="w-nine font-inter">
-        <div>
-          <h1 className="text-4xl font-bold text-titleRed">
-            ¡Hola entrenador!
-          </h1>
-          <p className="text-2xl font-medium text-paragraph">
-            Para poder comenzar, dame tu nombre
-          </p>
-        </div>
-        <form onSubmit={handleSubmit} className="font-roboto">
-          <input
-            ref={trainerNameValue}
-            type="text"
-            placeholder="Tu nombre..."
-            className="shadow-lg placeholder:font-medium"
+      <header className="row-start-2 row-end-4 flex w-full items-center justify-center">
+        <figure className="w-nine max-w-[54rem]">
+          <img
+            src="/src/assets/png/logo-main.png"
+            alt="Imagen referencial sobre la aplicación"
+            className="w-full"
           />
-          <button className="bg-button text-white">Comenzar</button>
-        </form>
+        </figure>
+      </header>
+      <main className="row-start-4 row-end-11 flex w-full items-center justify-center font-inter">
+        <div className="flex w-nine flex-col gap-24">
+          <div className="flex flex-col gap-8 text-center">
+            <h1 className="text-5xl font-bold text-titleRed">
+              ¡Hola entrenador!
+            </h1>
+            <p className="text-2xl font-medium text-paragraph">
+              Para poder comenzar, dame tu nombre
+            </p>
+          </div>
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col items-center gap-4 font-roboto"
+          >
+            <input
+              ref={trainerNameValue}
+              type="text"
+              placeholder="Tu nombre..."
+              className="p-6 text-2xl shadow-lg placeholder:text-2xl placeholder:font-medium"
+            />
+            <button className="bg-button p-6 text-2xl text-white">
+              Comenzar
+            </button>
+          </form>
+        </div>
       </main>
-      <footer className="">
-        <div></div>
-        <span></span>
-        <div></div>
+      <footer className="row-start-11 row-end-13 w-full">
+        <div className="relative h-sixFive w-full bg-first">
+          <span className="absolute bottom-[-2rem] left-[43%] inline-block h-20 w-20 bg-elipsePoke bg-cover bg-center bg-no-repeat sm:bottom-[-3.5rem] sm:h-32 sm:w-32"></span>
+        </div>
+
+        <div className="h-threeFive w-full bg-second"></div>
       </footer>
     </>
   );
