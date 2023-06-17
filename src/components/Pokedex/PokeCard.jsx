@@ -16,8 +16,11 @@ const PokeCard = ({ url }) => {
   };
 
   return (
-    <article>
-      <header onClick={handleNavigate}>
+    <article className={`${pokemon?.types[0].type.name}`}>
+      <header
+        onClick={handleNavigate}
+        className={`bg-${pokemon?.types[0].type.name}`}
+      >
         <img
           src={pokemon?.sprites.other["official-artwork"].front_default}
           alt=""
