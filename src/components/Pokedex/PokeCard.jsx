@@ -49,32 +49,50 @@ const PokeCard = ({ url }) => {
   });
 
   return (
-    <article className={`${cardColor} min-w-[60%] snap-center`}>
-      <div>
-        <header onClick={handleNavigate} className={`bg-${cardColor}`}>
+    <article
+      className={`${cardColor} h-max min-w-[60%] snap-center rounded-xl`}
+    >
+      <div className=" w-full">
+        <header
+          onClick={handleNavigate}
+          className={`bg-${cardColor} flex justify-center`}
+        >
           <img
             src={pokemon?.sprites.other["official-artwork"].front_default}
+            className="max-sm:max-w-[11.8rem]"
             alt=""
           />
         </header>
-        <section>
-          <h3>{nameResult}</h3>
-          <ul>
-            {typesResult?.map((typeInfo) => (
-              <li key={typeInfo.url}>{typeInfo.name}</li>
-            ))}
-          </ul>
-        </section>
-        <footer>
-          <ul>
-            {statesResult?.map((statInfo) => (
-              <li key={statInfo.stat.url}>
-                <span>{statInfo.stat.name.toUpperCase()}</span>
-                <span>{statInfo.base_stat}</span>
-              </li>
-            ))}
-          </ul>
-        </footer>
+        <div className="bg-white">
+          <section className="flex flex-col">
+            <h3 className="text-center text-2xl">{nameResult}</h3>
+            <ul className="flex justify-center gap-2 text-xl text-titleBlack">
+              {typesResult?.map((typeInfo, index) => (
+                <>
+                  {index < 1 ? "" : <span>/</span>}
+                  <li key={typeInfo.url}>{typeInfo.name}</li>
+                </>
+              ))}
+            </ul>
+          </section>
+          <div></div>
+          <footer>
+            <h4 className="text-center text-base text-subParagraph">Type</h4>
+            <ul className="grid grid-cols-2 grid-rows-2">
+              {statesResult?.map((statInfo) => (
+                <li
+                  className="flex flex-col text-center"
+                  key={statInfo.stat.url}
+                >
+                  <span className="text-base text-subParagraph">
+                    {statInfo.stat.name.toUpperCase()}
+                  </span>
+                  <span className="text-2xl">{statInfo.base_stat}</span>
+                </li>
+              ))}
+            </ul>
+          </footer>
+        </div>
       </div>
     </article>
   );

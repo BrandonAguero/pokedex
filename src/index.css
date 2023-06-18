@@ -17,18 +17,23 @@
 @layer components {
   .grass {
     background-color: #b3dbb9;
+    color: #416460;
   }
   .fire {
     background-color: #e68124;
+    color: #e75c35;
   }
   .normal {
     background-color: #8e5d67;
+    color: #735259;
   }
   .water {
     background-color: #5ba2fd;
+    color: #1479fb;
   }
   .bug {
     background-color: #82c872;
+    color: #4ab648;
   }
   .bg-grass {
     background: linear-gradient(

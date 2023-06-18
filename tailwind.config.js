@@ -9,6 +9,8 @@ export default {
         first: "#DD1A1A",
         second: "#0C0C0C",
         paragraph: "#302F2F",
+        titleBlack: "#4F4F4F",
+        subParagraph: "#9F9F9F",
       },
       width: {
         nine: "90%",
