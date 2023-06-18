@@ -3,7 +3,7 @@ import PokeCard from "./PokeCard.jsx";
 const PokeContainer = ({ pokemons }) => {
   return (
     <>
-      <div>
+      <div className="row-start-7  row-end-13 ml-auto mr-auto flex w-nine snap-proximity overflow-x-scroll overscroll-x-contain">
         {pokemons?.map((pokemon) => (
           <PokeCard key={pokemon.url} url={pokemon.url} />
         ))}
