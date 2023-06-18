@@ -71,7 +71,7 @@ const Pokedex = () => {
       <header className="row-start-1 row-end-7 flex items-center justify-center">
         <div className="flex w-nine flex-col items-center gap-8 lg:gap-16">
           <figure className="max-w-[54rem]">
-            <img src="./src/assets/png/logo-main.png" alt="Logo principal" />
+            <img src="/png/logo-main.png" alt="Logo principal" />
           </figure>
           <div>
             <h2 className="text-center font-inter text-2xl text-titleRed lg:text-4xl">

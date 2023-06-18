@@ -25,7 +25,7 @@ export default {
         roboto: ["Roboto", "sans-serif"],
       },
       backgroundImage: {
-        elipsePoke: "url('../src/assets/png/elipse.png')",
+        elipsePoke: "url('/png/elipse.png')",
       },
       gridTemplateRows: {
         12: "repeat(12, minmax(0, 1fr))",

@@ -21,7 +21,7 @@ const Home = () => {
       <header className="row-start-2 row-end-4 flex w-full items-center justify-center">
         <figure className="w-nine max-w-[54rem]">
           <img
-            src="./src/assets/png/logo-main.png"
+            src="/png/logo-main.png"
             alt="Imagen referencial sobre la aplicación"
             className="w-full"
           />
