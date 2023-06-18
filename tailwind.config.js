@@ -63,6 +63,11 @@ export default {
         13: "13",
       },
     },
+    screens: {
+      m: "360px",
+      sm: "640px",
+      lg: "1024px",
+    },
   },
   plugins: [],
 };

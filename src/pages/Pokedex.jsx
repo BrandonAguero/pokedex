@@ -68,7 +68,7 @@ const Pokedex = () => {
 
   return (
     <>
-      <header className="row-start-1 row-end-7 flex items-center justify-center">
+      <header className="row-start-1 row-end-7 flex items-center justify-center m:row-end-6">
         <div className="flex w-nine flex-col items-center gap-8 lg:gap-16">
           <figure className="max-w-[54rem]">
             <img src="/png/logo-main.png" alt="Logo principal" />

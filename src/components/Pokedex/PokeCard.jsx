@@ -59,14 +59,14 @@ const PokeCard = ({ url }) => {
         >
           <img
             src={pokemon?.sprites.other["official-artwork"].front_default}
-            className="max-sm:max-w-[10rem]"
+            className="max-w-[10rem] m:relative m:top-12 m:max-w-[15rem]"
             alt=""
           />
         </header>
-        <div className="bg-white">
-          <section className="flex flex-col">
-            <h3 className="text-center text-2xl">{nameResult}</h3>
-            <ul className="flex justify-center gap-2 text-xl text-titleBlack">
+        <div className="bg-white m:pt-12">
+          <section className="flex flex-col m:gap-2">
+            <h3 className="text-center text-2xl m:text-4xl">{nameResult}</h3>
+            <ul className="flex justify-center gap-2 text-xl text-titleBlack m:text-2xl">
               {typesResult?.map((typeInfo, index) => (
                 <>
                   {index < 1 ? "" : <span>/</span>}
@@ -75,19 +75,23 @@ const PokeCard = ({ url }) => {
               ))}
             </ul>
           </section>
-          <div></div>
-          <footer>
-            <h4 className="text-center text-base text-subParagraph">Type</h4>
-            <ul className="grid grid-cols-2 grid-rows-2">
+          <footer className="flex flex-col m:gap-2">
+            <h4 className="text-center text-base text-subParagraph m:text-xl">
+              Type
+            </h4>
+            <div className="bg-gray-200 m:h-[0.1rem]"></div>
+            <ul className="grid grid-cols-2 grid-rows-2 m:gap-2">
               {statesResult?.map((statInfo) => (
                 <li
-                  className="flex flex-col text-center"
+                  className="flex flex-col text-center m:text-xl"
                   key={statInfo.stat.url}
                 >
                   <span className="text-base text-subParagraph">
                     {statInfo.stat.name.toUpperCase()}
                   </span>
-                  <span className="text-2xl">{statInfo.base_stat}</span>
+                  <span className="text-2xl m:text-3xl">
+                    {statInfo.base_stat}
+                  </span>
                 </li>
               ))}
             </ul>
