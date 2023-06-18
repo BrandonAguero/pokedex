@@ -50,16 +50,16 @@ const PokeCard = ({ url }) => {
 
   return (
     <article
-      className={`${cardColor} h-max min-w-[60%] snap-center rounded-xl`}
+      className={`${cardColor} h-max min-w-[60%] snap-center rounded-xl p-2`}
     >
-      <div className=" w-full">
+      <div className="w-full overflow-hidden rounded-lg">
         <header
           onClick={handleNavigate}
           className={`bg-${cardColor} flex justify-center`}
         >
           <img
             src={pokemon?.sprites.other["official-artwork"].front_default}
-            className="max-sm:max-w-[11.8rem]"
+            className="max-sm:max-w-[10rem]"
             alt=""
           />
         </header>
