@@ -65,8 +65,9 @@ export default {
     },
     screens: {
       m: "360px",
-      sm: "640px",
+      sm: "600px",
       lg: "1024px",
+      "max-sm": { max: "599px" },
     },
   },
   plugins: [],

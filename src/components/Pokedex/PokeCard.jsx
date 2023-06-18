@@ -41,8 +41,6 @@ const PokeCard = ({ url }) => {
     };
   });
 
-  console.log(typesResult);
-
   const statesResult = pokemon?.stats.filter((stats) => {
     if (stats.stat.name.includes("-")) return false;
     return stats;
@@ -50,7 +48,7 @@ const PokeCard = ({ url }) => {
 
   return (
     <article
-      className={`${cardColor} h-max min-w-[60%] snap-center rounded-xl p-2`}
+      className={`${cardColor} h-max min-w-[60%] snap-center rounded-xl p-2 sm:min-w-[28rem]`}
     >
       <div className="w-full overflow-hidden rounded-lg">
         <header
