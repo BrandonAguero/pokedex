@@ -16,7 +16,7 @@ const PokeCard = ({ url }) => {
   };
 
   let cardColor = "";
-  let type = pokemon?.types[0].type.name;
+  const type = pokemon?.types[0].type.name;
   if (type === "grass") {
     cardColor = "grass";
   } else if (type === "fire") {

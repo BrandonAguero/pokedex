@@ -13,17 +13,48 @@ const PokedexName = () => {
     getPokemonByName();
   }, [name]);
 
-  console.log(pokemon);
-
   const statesResult = pokemon?.stats.filter((stats) => {
     if (stats.stat.name.includes("-")) return false;
     return stats;
   });
 
-  const moves = pokemon?.moves.filter((move, index) => {
-    if (index <= 25) return move;
-  });
-  console.log(moves);
+  let cardColor = "";
+  const type = pokemon?.types[0].type.name;
+  if (type === "grass") {
+    cardColor = "grass";
+  } else if (type === "fire") {
+    cardColor = "fire";
+  } else if (type === "bug") {
+    cardColor = "bug";
+  } else if (type === "normal") {
+    cardColor = "normal";
+  } else if (type === "water") {
+    cardColor = "water";
+  } else if (type === "poison") {
+    cardColor = "poison";
+  } else if (type === "electric") {
+    cardColor = "electric";
+  } else if (type === "ghost") {
+    cardColor = "ghost";
+  } else if (type === "rock") {
+    cardColor = "rock";
+  } else if (type === "fighting") {
+    cardColor = "fighting";
+  } else if (type === "psychic") {
+    cardColor = "psychic";
+  } else if (type === "ground") {
+    cardColor = "ground";
+  } else if (type === "fairy") {
+    cardColor = "fairy";
+  } else if (type === "dark") {
+    cardColor = "dark";
+  } else if (type === "steel") {
+    cardColor = "steel";
+  } else if (type === "ice") {
+    cardColor = "ice";
+  } else if (type === "dragon") {
+    cardColor = "dragon";
+  }
 
   return (
     <>
@@ -45,14 +76,14 @@ const PokedexName = () => {
           </header>
           <article>
             <header>
-              <figure>
+              <figure className="w-2/5">
                 <img
                   src={pokemon?.sprites.other["official-artwork"].front_default}
                 />
               </figure>
               <div>
-                <h2>#{pokemon?.id}</h2>
-                <h1>{pokemon?.name}</h1>
+                <h2 className="text-2xl">#{pokemon?.id}</h2>
+                <h1 className="text-3xl">{pokemon?.name}</h1>
               </div>
               <ul>
                 <li>
@@ -103,7 +134,7 @@ const PokedexName = () => {
               <div>
                 <h4>Movements</h4>
                 <ul>
-                  {moves.map((move) => (
+                  {pokemon?.moves.map((move) => (
                     <li>{move.move.name}</li>
                   ))}
                 </ul>
