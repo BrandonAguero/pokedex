@@ -66,7 +66,7 @@ const PokedexName = () => {
         <>
           <header className="lg relative row-start-1 row-end-4 flex items-center justify-center  m:row-end-4">
             <div className="absolute top-0 z-0 h-full w-full bg-gradient-to-t from-black to-first ">
-              <span className="absolute bottom-[-3rem] right-32 bg-elipsePoke bg-contain bg-center bg-no-repeat lg:inline-block lg:h-32 lg:w-32"></span>
+              <span className="bg-elipsePoke absolute bottom-[-3rem] right-32 bg-contain bg-center bg-no-repeat lg:inline-block lg:h-32 lg:w-32"></span>
             </div>
             <div className="absolute z-10 flex w-nine flex-col items-center gap-8 m:top-16 lg:gap-16 max-m:top-12">
               <figure className="max-w-[54rem]">
@@ -75,9 +75,10 @@ const PokedexName = () => {
             </div>
           </header>
           <article>
-            <header>
-              <figure className="w-2/5">
+            <header className={`bg-${cardColor}`}>
+              <figure className={`bg-${cardColor}`}>
                 <img
+                  className="w-2/5"
                   src={pokemon?.sprites.other["official-artwork"].front_default}
                 />
               </figure>
