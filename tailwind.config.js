@@ -69,6 +69,7 @@ export default {
       sm: "600px",
       lg: "1024px",
       "max-sm": { max: "599px" },
+      "max-m": { max: "360px" },
     },
   },
   plugins: [],

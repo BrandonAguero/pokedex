@@ -14,7 +14,7 @@ const Pokedex = () => {
 
   const trainerName = useSelector((states) => states.trainerName);
 
-  const url = "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0";
+  const url = "https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0";
 
   const urlTypes = "https://pokeapi.co/api/v2/type";
 
@@ -145,7 +145,6 @@ const Pokedex = () => {
                 ))}
               </ul>
             </div>
-
             <div className="w-[21rem] cursor-pointer font-roboto text-2xl shadow-lg lg:h-[6.5rem] lg:w-[32rem] lg:p-6 lg:text-4xl">
               <Select
                 options={options}

@@ -77,7 +77,7 @@ const PokeCard = ({ url }) => {
       <div className="w-full overflow-hidden rounded-lg">
         <header
           onClick={handleNavigate}
-          className={`bg-${cardColor} flex justify-center`}
+          className={`bg-${cardColor} flex cursor-pointer justify-center`}
         >
           <img
             src={pokemon?.sprites.other["official-artwork"].front_default}
