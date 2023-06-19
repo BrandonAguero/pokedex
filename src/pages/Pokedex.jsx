@@ -146,7 +146,7 @@ const Pokedex = () => {
               </ul>
             </div>
 
-            <div className="w-[21rem]  font-roboto text-2xl shadow-lg lg:h-[6.5rem] lg:w-[32rem] lg:p-6 lg:text-4xl">
+            <div className="w-[21rem] cursor-pointer font-roboto text-2xl shadow-lg lg:h-[6.5rem] lg:w-[32rem] lg:p-6 lg:text-4xl">
               <Select
                 options={options}
                 value={selectedOption}
@@ -157,6 +157,7 @@ const Pokedex = () => {
                     ...provided,
                     border: "none",
                     boxShadow: "none",
+                    cursor: "pointer",
                   }),
                   indicatorSeparator: () => ({
                     display: "none",
