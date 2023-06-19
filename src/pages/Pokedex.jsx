@@ -99,8 +99,10 @@ const Pokedex = () => {
   return (
     <>
       <header className="relative row-start-1 row-end-7 flex items-center justify-center m:row-end-6">
-        <div className="absolute top-0 z-0 h-2/6 w-full bg-gradient-to-t from-black to-first m:h-[37%] 2m:h-[44%]"></div>
-        <div className="z-10 flex w-nine flex-col items-center gap-8 lg:gap-16">
+        <div className="absolute top-0 z-0 h-2/6 w-full bg-gradient-to-t from-black to-first m:h-[37%] 2m:h-[44%]">
+          <span className="absolute bottom-[-3rem] right-32 bg-elipsePoke bg-contain bg-center bg-no-repeat lg:inline-block lg:h-32 lg:w-32"></span>
+        </div>
+        <div className="relative z-10 flex w-nine flex-col items-center gap-8 lg:gap-16">
           <figure className="max-w-[54rem]">
             <img src="/png/logo-main.png" alt="Logo principal" />
           </figure>
