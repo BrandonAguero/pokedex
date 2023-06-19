@@ -64,7 +64,7 @@ const PokedexName = () => {
         </h1>
       ) : (
         <>
-          <header className="lg relative row-start-1 row-end-4 flex items-center justify-center  m:row-end-4">
+          <header className="lg relative row-start-1 row-end-4 flex items-center justify-center">
             <div className="absolute top-0 z-0 h-full w-full bg-gradient-to-t from-black to-first ">
               <span className="bg-elipsePoke absolute bottom-[-3rem] right-32 bg-contain bg-center bg-no-repeat lg:inline-block lg:h-32 lg:w-32"></span>
             </div>
@@ -74,17 +74,23 @@ const PokedexName = () => {
               </figure>
             </div>
           </header>
-          <article>
-            <header className={`bg-${cardColor}`}>
+          <article className="max-sm:nap-proximity row-start-5 row-end-13 ml-auto mr-auto flex w-nine max-sm:overflow-x-scroll max-sm:overscroll-x-contain">
+            <header className="flex w-full flex-col">
               <figure className={`bg-${cardColor}`}>
                 <img
-                  className="w-2/5"
+                  className="ml-auto mr-auto w-1/2"
                   src={pokemon?.sprites.other["official-artwork"].front_default}
                 />
               </figure>
               <div>
-                <h2 className="text-2xl">#{pokemon?.id}</h2>
-                <h1 className="text-3xl">{pokemon?.name}</h1>
+                <h2 className={`text-center text-2xl text-${cardColor}`}>
+                  #{pokemon?.id}
+                </h2>
+                <h1
+                  className={`text text- text-3xl text-${cardColor} text-center`}
+                >
+                  {pokemon?.name}
+                </h1>
               </div>
               <ul>
                 <li>
