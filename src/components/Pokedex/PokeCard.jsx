@@ -1,9 +1,12 @@
 import { useEffect } from "react";
 import useFetch from "../../hooks/useFetch.js";
 import { useNavigate } from "react-router";
+import { useState } from "react";
+import { useLayoutEffect } from "react";
 
 const PokeCard = ({ url }) => {
   const [pokemon, getOnlyPokemon] = useFetch(url);
+  const [cardColor, setCardColor] = useState("");
 
   useEffect(() => {
     getOnlyPokemon();
@@ -15,43 +18,44 @@ const PokeCard = ({ url }) => {
     navigate(`/pokedex/${pokemon.name}`);
   };
 
-  let cardColor = "";
-  const type = pokemon?.types[0].type.name;
-  if (type === "grass") {
-    cardColor = "grass";
-  } else if (type === "fire") {
-    cardColor = "fire";
-  } else if (type === "bug") {
-    cardColor = "bug";
-  } else if (type === "normal") {
-    cardColor = "normal";
-  } else if (type === "water") {
-    cardColor = "water";
-  } else if (type === "poison") {
-    cardColor = "poison";
-  } else if (type === "electric") {
-    cardColor = "electric";
-  } else if (type === "ghost") {
-    cardColor = "ghost";
-  } else if (type === "rock") {
-    cardColor = "rock";
-  } else if (type === "fighting") {
-    cardColor = "fighting";
-  } else if (type === "psychic") {
-    cardColor = "psychic";
-  } else if (type === "ground") {
-    cardColor = "ground";
-  } else if (type === "fairy") {
-    cardColor = "fairy";
-  } else if (type === "dark") {
-    cardColor = "dark";
-  } else if (type === "steel") {
-    cardColor = "steel";
-  } else if (type === "ice") {
-    cardColor = "ice";
-  } else if (type === "dragon") {
-    cardColor = "dragon";
-  }
+  useLayoutEffect(() => {
+    setCardColor(pokemon?.types[0].type.name);
+    /*     if (type === "grass") {
+      cardColor = "grass";
+    } else if (type === "fire") {
+      cardColor = "fire";
+    } else if (type === "bug") {
+      cardColor = "bug";
+    } else if (type === "normal") {
+      cardColor = "normal";
+    } else if (type === "water") {
+      cardColor = "water";
+    } else if (type === "poison") {
+      cardColor = "poison";
+    } else if (type === "electric") {
+      cardColor = "electric";
+    } else if (type === "ghost") {
+      cardColor = "ghost";
+    } else if (type === "rock") {
+      cardColor = "rock";
+    } else if (type === "fighting") {
+      cardColor = "fighting";
+    } else if (type === "psychic") {
+      cardColor = "psychic";
+    } else if (type === "ground") {
+      cardColor = "ground";
+    } else if (type === "fairy") {
+      cardColor = "fairy";
+    } else if (type === "dark") {
+      cardColor = "dark";
+    } else if (type === "steel") {
+      cardColor = "steel";
+    } else if (type === "ice") {
+      cardColor = "ice";
+    } else if (type === "dragon") {
+      cardColor = "dragon";
+    } */
+  }, [pokemon]);
 
   const name = pokemon?.name;
   const nameResult = name?.charAt(0).toUpperCase() + name?.slice(1);
@@ -77,7 +81,7 @@ const PokeCard = ({ url }) => {
       <div className="w-full overflow-hidden rounded-lg">
         <header
           onClick={handleNavigate}
-          className={`bg-${cardColor} flex cursor-pointer justify-center`}
+          className={`${cardColor}-bg flex cursor-pointer justify-center`}
         >
           <img
             src={pokemon?.sprites.other["official-artwork"].front_default}

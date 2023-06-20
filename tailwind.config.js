@@ -28,9 +28,11 @@ export default {
         normal: "#735259",
         fire: "#e75c35",
         grass: "#416460",
+        gray: "#E5E5E5",
       },
       width: {
         nine: "90%",
+        five: "50%",
       },
       minWidth: {
         base: "32rem",
@@ -78,6 +80,7 @@ export default {
         rock: "linear-gradient(177.03deg, #7E7E7E -11.97%, #8D8D94 57.49%, #D3D3D3 135.64%)",
         ghost:
           "linear-gradient(177.03deg, #323569 -11.97%, #454AA8 57.49%, #787DDA 135.64%)",
+        life: "linear-gradient(90deg, rgba(255,45,0,1) 12%, rgba(251,255,0,1) 52%, rgba(0,255,85,1) 100%)",
       },
       gridRowStart: {
         1: "1",

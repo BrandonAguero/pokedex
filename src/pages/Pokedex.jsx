@@ -14,7 +14,7 @@ const Pokedex = () => {
 
   const trainerName = useSelector((states) => states.trainerName);
 
-  const url = "https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0";
+  const url = "https://pokeapi.co/api/v2/pokemon?limit=20&offset=0";
 
   const urlTypes = "https://pokeapi.co/api/v2/type";
 
