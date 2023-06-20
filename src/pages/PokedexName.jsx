@@ -209,9 +209,9 @@ const PokedexName = () => {
                 <h4 className="text-center text-3xl font-medium m:text-4xl">
                   Stats
                 </h4>
-                <ul>
-                  <li className="flex flex-col gap-12 m:gap-16">
-                    {statesResult?.map((stat) => (
+                <ul className="flex flex-col gap-4 m:gap-8">
+                  {statesResult?.map((stat) => (
+                    <li className="flex flex-col gap-12 m:gap-16">
                       <div className="flex flex-col gap-2 ">
                         <div className="flex justify-between">
                           <span className="text-xl font-semibold m:text-2xl">
@@ -225,11 +225,11 @@ const PokedexName = () => {
                           className="overflow-x-hidden"
                           style={{ width: `${(stat?.base_stat * 100) / 255}%` }}
                         >
-                          <div className="h-8 w-[89vw] bg-life m:h-12"></div>
+                          <div className="h-8 w-[91vw] bg-life m:h-12 m:w-[90vw] 2m:w-[77vw] sm:w-[65vw] 3sm:w-[50vw] lg:w-[40vw] 2lg:w-[28vw]"></div>
                         </div>
                       </div>
-                    ))}
-                  </li>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </section>
