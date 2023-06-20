@@ -201,7 +201,7 @@ const PokedexName = () => {
                 <ul className="flex h-full flex-wrap justify-center gap-4 overflow-x-scroll">
                   {movesPokemon?.map((move) => (
                     <li
-                      className="h-12 rounded-3xl bg-gray p-4 m:h-16 m:text-2xl"
+                      className="h-12 w-max rounded-3xl bg-gray p-4 m:h-16 m:text-2xl"
                       key={move}
                     >
                       {move}
