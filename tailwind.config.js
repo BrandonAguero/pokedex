@@ -51,7 +51,7 @@ export default {
       backgroundImage: {
         electric:
           "linear-gradient(179.75deg, #0C1395 -19.96%, #2B319B 43.67%, #7075D9 138.4%)",
-        poison: " linear-gradient(180.57deg, #5b3184 -45.23%, #c48ef9 158.14%)",
+        poison: "linear-gradient(180.57deg, #5b3184 -45.23%, #c48ef9 158.14%)",
         normal:
           "linear-gradient(181.51deg, #735259 -6.44%, #bc6b7c 121.95%,#7c3f4c 186.11%)",
         bug: "linear-gradient(177.56deg,#62db60 -58.92%,#3bb039 16.57%, #aaffa8 209.53%)",
@@ -71,7 +71,7 @@ export default {
         ground:
           "linear-gradient(179.75deg, #654008 -19.96%, #895C1A 43.67%, #D69638 138.4%)",
         psychic:
-          "linear-gradient(180deg, #fffc9d 0, #f1eb85 25%, #d8d86c 50%, #bec653 75%, #a6b53c 100%);",
+          "linear-gradient(180deg, #fffc9d 0, #f1eb85 25%, #d8d86c 50%, #bec653 75%, #a6b53c 100%)",
         fighting:
           "linear-gradient(176.83deg, #96402A -8.78%, #F1613C 169.09%, #CB735D 242.33%)",
         rock: "linear-gradient(177.03deg, #7E7E7E -11.97%, #8D8D94 57.49%, #D3D3D3 135.64%)",

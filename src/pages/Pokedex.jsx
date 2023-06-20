@@ -14,7 +14,7 @@ const Pokedex = () => {
 
   const trainerName = useSelector((states) => states.trainerName);
 
-  const url = "https://pokeapi.co/api/v2/pokemon?limit=20&offset=0";
+  const url = "https://pokeapi.co/api/v2/pokemon?limit=11&offset=0";
 
   const urlTypes = "https://pokeapi.co/api/v2/type";
 
@@ -55,6 +55,8 @@ const Pokedex = () => {
   useEffect(() => {
     getAllTypes();
   }, []);
+
+  console.log(allInfo);
 
   const allNamesPokemons = allInfo?.results.map((pokemon) => {
     const name = pokemon.name;
@@ -100,7 +102,7 @@ const Pokedex = () => {
     <>
       <header className="relative row-start-1 row-end-7 flex items-center justify-center m:row-end-6">
         <div className="absolute top-0 z-0 h-2/6 w-full bg-gradient-to-t from-black to-first m:h-[37%] 2m:h-[44%]">
-          <span className="bg-elipsePoke absolute bottom-[-3rem] right-32 bg-contain bg-center bg-no-repeat lg:inline-block lg:h-32 lg:w-32"></span>
+          <span className="absolute bottom-[-3rem] right-32 bg-elipsePoke bg-contain bg-center bg-no-repeat lg:inline-block lg:h-32 lg:w-32"></span>
         </div>
         <div className="relative z-10 flex w-nine flex-col items-center gap-8 lg:gap-16">
           <figure className="max-w-[54rem]">

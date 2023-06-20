@@ -49,7 +49,7 @@ const PokeContainer = ({ pokemons }) => {
           ))}
         </div>
         <Pagination
-          count={Math.ceil(pokemons?.length / cardsPerPage)}
+          count={Math.ceil((pokemons?.length || 0) / cardsPerPage)}
           page={page}
           onChange={handleChange}
           shape="rounded"
