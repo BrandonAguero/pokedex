@@ -94,7 +94,7 @@ const PokedexName = () => {
         <>
           <header className="lg relative row-start-1 row-end-4 flex items-center justify-center">
             <div className="absolute top-0 z-0 h-full w-full bg-gradient-to-t from-black to-first ">
-              <span className="bg-elipsePoke absolute bottom-[-3rem] right-32 bg-contain bg-center bg-no-repeat lg:inline-block lg:h-32 lg:w-32"></span>
+              <span className="absolute bottom-[-3rem] right-32 bg-elipsePoke bg-contain bg-center bg-no-repeat lg:inline-block lg:h-32 lg:w-32"></span>
             </div>
             <div className="absolute z-10 flex w-nine flex-col items-center gap-8 m:top-16 lg:gap-16 max-m:top-12">
               <figure className="max-w-[54rem]">
@@ -102,59 +102,61 @@ const PokedexName = () => {
               </figure>
             </div>
           </header>
-          <article className="max-sm:nap-proximity row-start-4 row-end-13 m-auto flex h-[90%] w-nine items-center gap-8  max-sm:snap-x max-sm:snap-proximity max-sm:overflow-x-scroll max-sm:overscroll-x-contain">
-            <header className="flex h-full min-w-full snap-center flex-col items-center gap-4 border-2 border-gray">
+          <article className="max-lg:nap-proximity  row-start-4 row-end-13 m-auto flex h-[90%] max-h-[45rem] w-nine gap-8 m:max-h-[47rem] 2lg:justify-center max-lg:max-w-[41rem]  max-lg:snap-x max-lg:snap-proximity max-lg:overflow-x-scroll max-lg:overscroll-x-contain">
+            <header className="flex h-full w-[40rem] max-w-[41rem] flex-col items-center gap-4 border-2 border-gray m:gap-8 max-lg:min-w-full max-lg:snap-center">
               <figure className={`bg-${cardColor}`}>
                 <img
-                  className="ml-auto mr-auto w-1/2"
+                  className="ml-auto mr-auto w-[40%] m:w-[60%] m:max-w-[39rem]"
                   src={pokemon?.sprites.other["official-artwork"].front_default}
                 />
               </figure>
               <div>
                 <h2
-                  className={`text-center text-2xl font-medium text-${cardColor}`}
+                  className={`text-center text-2xl font-medium text-${cardColor} m:text-3xl`}
                 >
                   #{pokemon?.id}
                 </h2>
                 <h1
-                  className={`text text-3xl font-medium text-${cardColor} text-center`}
+                  className={`text text-3xl font-medium text-${cardColor} text-center m:text-4xl`}
                 >
                   {capitalizeNamePokemon}
                 </h1>
               </div>
               <ul className="flex w-4/5 justify-between font-roboto">
                 <li className="flex flex-col items-center">
-                  <span>Peso</span>
-                  <span className="text-3xl font-medium">
+                  <span className="m:text-2xl">Peso</span>
+                  <span className="text-3xl font-medium m:text-4xl">
                     {pokemon?.weight}
                   </span>
                 </li>
                 <li className="flex flex-col items-center">
-                  <span>Altura</span>
-                  <span className="text-3xl font-medium">
+                  <span className="m:text-2xl">Altura</span>
+                  <span className="text-3xl font-medium m:text-4xl">
                     {pokemon?.height}
                   </span>
                 </li>
               </ul>
               <div className="flex w-nine items-center justify-between gap-4 font-roboto">
-                <div className="flex h-full flex-col">
-                  <h4 className="text-center text-4xl font-medium">Tipo</h4>
+                <div className="flex h-full flex-col gap-4">
+                  <h4 className="text-center text-4xl font-medium m:text-5xl">
+                    Tipo
+                  </h4>
                   <ul className="flex justify-center gap-4">
                     {typesPokemon?.map((type) => (
-                      <li className="p-2 text-xl" key={type}>
+                      <li className="p-2 text-xl m:text-2xl" key={type}>
                         {type}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="flex h-full flex-col">
-                  <h4 className="text-center text-4xl font-medium">
+                <div className="flex h-full flex-col gap-4">
+                  <h4 className="text-center text-4xl font-medium m:text-5xl">
                     Habilidades
                   </h4>
                   <ul className="flex justify-center gap-4">
                     {abilitiesPokemon?.map((ability) => (
                       <li
-                        className="border-2 border-gray p-2 text-xl"
+                        className="border-2 border-gray p-2 text-center text-xl m:text-2xl"
                         key={ability}
                       >
                         {ability}
@@ -164,18 +166,20 @@ const PokedexName = () => {
                 </div>
               </div>
             </header>
-            <section className="h-full min-w-full snap-center border-2 border-gray">
-              <div className="p-4">
-                <h4 className="text-center text-3xl font-medium">Stats</h4>
+            <section className="h-full w-[40rem] border-2 border-gray max-lg:min-w-full max-lg:snap-center">
+              <div className="flex flex-col gap-8 p-4">
+                <h4 className="text-center text-3xl font-medium m:text-4xl">
+                  Stats
+                </h4>
                 <ul>
-                  <li className="flex flex-col gap-12">
+                  <li className="flex flex-col gap-12 m:gap-16">
                     {statesResult?.map((stat) => (
-                      <div className="flex flex-col gap-2">
+                      <div className="flex flex-col gap-2 ">
                         <div className="flex justify-between">
-                          <span className="text-xl font-semibold">
+                          <span className="text-xl font-semibold m:text-2xl">
                             {stat?.stat.name.toUpperCase()}
                           </span>
-                          <span className="font-semibold">
+                          <span className="font-semibold m:text-2xl">
                             {stat?.base_stat}/255
                           </span>
                         </div>
@@ -183,7 +187,7 @@ const PokedexName = () => {
                           className="overflow-x-hidden"
                           style={{ width: `${(stat?.base_stat * 100) / 255}%` }}
                         >
-                          <div className="h-8 w-[89vw] bg-life"></div>
+                          <div className="h-8 w-[89vw] bg-life m:h-12"></div>
                         </div>
                       </div>
                     ))}
@@ -191,12 +195,15 @@ const PokedexName = () => {
                 </ul>
               </div>
             </section>
-            <section className="h-full min-w-full snap-center border-2 border-gray">
-              <div className="flex flex-col gap-8">
+            <section className="h-full w-[40rem] border-2 border-gray max-lg:min-w-full max-lg:snap-center">
+              <div className="flex h-full flex-col gap-8 m:gap-12">
                 <h4 className="text-center text-3xl font-medium">Movements</h4>
-                <ul className="flex h-96 flex-wrap justify-center gap-4 overflow-x-scroll">
+                <ul className="flex h-full flex-wrap justify-center gap-4 overflow-x-scroll">
                   {movesPokemon?.map((move) => (
-                    <li className="rounded-3xl bg-gray p-4" key={move}>
+                    <li
+                      className="rounded-3xl bg-gray p-4 m:text-2xl"
+                      key={move}
+                    >
                       {move}
                     </li>
                   ))}

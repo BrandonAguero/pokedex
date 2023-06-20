@@ -45,9 +45,6 @@ export default {
         inter: ["Inter", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
       },
-      backgroundImage: {
-        elipsePoke: "url('/png/elipse.png')",
-      },
       gridTemplateRows: {
         12: "repeat(12, minmax(0, 1fr))",
       },
@@ -81,6 +78,7 @@ export default {
         ghost:
           "linear-gradient(177.03deg, #323569 -11.97%, #454AA8 57.49%, #787DDA 135.64%)",
         life: "linear-gradient(90deg, rgba(255,45,0,1) 12%, rgba(251,255,0,1) 52%, rgba(0,255,85,1) 100%)",
+        elipsePoke: "url('/png/elipse.png')",
       },
       gridRowStart: {
         1: "1",
@@ -118,6 +116,8 @@ export default {
       "2m": "500px",
       sm: "600px",
       lg: "1024px",
+      "2lg": "1330px",
+      "max-lg": { max: "1330px" },
       "max-sm": { max: "599px" },
       "max-m": { max: "360px" },
     },

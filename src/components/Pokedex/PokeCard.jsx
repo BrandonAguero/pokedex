@@ -20,41 +20,6 @@ const PokeCard = ({ url }) => {
 
   useLayoutEffect(() => {
     setCardColor(pokemon?.types[0].type.name);
-    /*     if (type === "grass") {
-      cardColor = "grass";
-    } else if (type === "fire") {
-      cardColor = "fire";
-    } else if (type === "bug") {
-      cardColor = "bug";
-    } else if (type === "normal") {
-      cardColor = "normal";
-    } else if (type === "water") {
-      cardColor = "water";
-    } else if (type === "poison") {
-      cardColor = "poison";
-    } else if (type === "electric") {
-      cardColor = "electric";
-    } else if (type === "ghost") {
-      cardColor = "ghost";
-    } else if (type === "rock") {
-      cardColor = "rock";
-    } else if (type === "fighting") {
-      cardColor = "fighting";
-    } else if (type === "psychic") {
-      cardColor = "psychic";
-    } else if (type === "ground") {
-      cardColor = "ground";
-    } else if (type === "fairy") {
-      cardColor = "fairy";
-    } else if (type === "dark") {
-      cardColor = "dark";
-    } else if (type === "steel") {
-      cardColor = "steel";
-    } else if (type === "ice") {
-      cardColor = "ice";
-    } else if (type === "dragon") {
-      cardColor = "dragon";
-    } */
   }, [pokemon]);
 
   const name = pokemon?.name;
@@ -81,7 +46,10 @@ const PokeCard = ({ url }) => {
       <div className="w-full overflow-hidden rounded-lg">
         <header
           onClick={handleNavigate}
-          className={`${cardColor}-bg flex cursor-pointer justify-center`}
+          className={`flex cursor-pointer justify-center`}
+          style={{
+            backgroundColor: "Background",
+          }}
         >
           <img
             src={pokemon?.sprites.other["official-artwork"].front_default}
