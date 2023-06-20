@@ -37,7 +37,7 @@ const PokeContainer = ({ pokemons }) => {
 
   return (
     <>
-      <div className="max-sm:nap-proximity row-start-7 row-end-13 ml-auto mr-auto flex w-nine gap-16 m:row-start-6 sm:hidden sm:justify-center max-sm:overflow-x-scroll max-sm:overscroll-x-contain">
+      <div className="row-start-7 row-end-13 ml-auto mr-auto flex w-nine gap-16 m:row-start-6 sm:hidden sm:justify-center max-sm:snap-x max-sm:snap-proximity max-sm:overflow-x-scroll max-sm:overscroll-x-contain">
         {pokemons?.map((pokemon) => (
           <PokeCard key={pokemon.name} url={pokemon.url} />
         ))}

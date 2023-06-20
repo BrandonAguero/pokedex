@@ -102,7 +102,7 @@ const PokedexName = () => {
               </figure>
             </div>
           </header>
-          <article className="max-lg:nap-proximity  row-start-4 row-end-13 m-auto flex h-[98%] max-h-[45rem] w-[98%] gap-8 m:max-h-[50rem] 2lg:justify-center max-lg:max-w-[41rem] max-lg:snap-x  max-lg:snap-proximity max-lg:overflow-x-scroll max-lg:overscroll-x-contain max-m:h-[97%]">
+          <article className="row-start-4 row-end-13 m-auto flex h-[98%] max-h-[45rem] w-[98%] gap-8 m:max-h-[50rem] 2lg:justify-center max-lg:max-w-[41rem] max-lg:snap-x  max-lg:snap-proximity max-lg:overflow-x-scroll max-lg:overscroll-x-contain max-m:h-[97%]">
             <header className="flex h-full w-[40rem] max-w-[41rem] flex-col items-center gap-4 border-2 border-gray m:gap-8 max-lg:min-w-full max-lg:snap-center">
               <figure className={`bg-${cardColor}`}>
                 <img

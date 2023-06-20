@@ -41,7 +41,7 @@ const PokeCard = ({ url }) => {
 
   return (
     <article
-      className={`${cardColor} h-max min-w-[60%] snap-center rounded-xl p-2 sm:min-w-[28rem]`}
+      className={`${cardColor} h-max min-w-[60%] rounded-xl p-2 sm:min-w-[28rem] sm:snap-center`}
     >
       <div className="w-full overflow-hidden rounded-lg">
         <header
