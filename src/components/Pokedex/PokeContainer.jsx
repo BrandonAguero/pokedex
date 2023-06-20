@@ -10,7 +10,7 @@ const PokeContainer = ({ pokemons }) => {
   const visiblePokemons = pokemons?.slice(startIndex, endIndex);
 
   const handleChange = (event, value) => {
-    setPage(value);
+    setPage(parseInt(value, 10));
   };
 
   useEffect(() => {

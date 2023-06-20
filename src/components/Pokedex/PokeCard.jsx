@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import useFetch from "../../hooks/useFetch.js";
 import { useNavigate } from "react-router";
 import { useState } from "react";
-import { useLayoutEffect } from "react";
 
 const PokeCard = ({ url }) => {
   const [pokemon, getOnlyPokemon] = useFetch(url);
@@ -19,7 +18,7 @@ const PokeCard = ({ url }) => {
     navigate(`/pokedex/${pokemon.name}`);
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setCardColor(pokemon?.types[0].type.name);
     if (cardColor === "grass") {
       setLinearGradient(
