@@ -56,8 +56,6 @@ const Pokedex = () => {
     getAllTypes();
   }, []);
 
-  console.log(allInfo);
-
   const allNamesPokemons = allInfo?.results.map((pokemon) => {
     const name = pokemon.name;
     return name.charAt(0).toUpperCase() + name.slice(1);

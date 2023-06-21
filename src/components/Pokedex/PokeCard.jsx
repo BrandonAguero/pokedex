@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import useFetch from "../../hooks/useFetch.js";
 import { useNavigate } from "react-router";
 import { useState } from "react";
@@ -108,8 +108,6 @@ const PokeCard = ({ url }) => {
     return stats;
   });
 
-  console.log(statesResult);
-
   return (
     <article
       className={`${cardColor} h-max min-w-[60%] rounded-xl p-2 sm:min-w-[28rem] sm:snap-center`}
@@ -133,10 +131,10 @@ const PokeCard = ({ url }) => {
             <h3 className="text-center text-2xl m:text-4xl">{nameResult}</h3>
             <ul className="flex justify-center gap-2 text-xl text-titleBlack m:text-2xl">
               {typesResult?.map((typeInfo, index) => (
-                <>
+                <React.Fragment key={typeInfo.url}>
                   {index < 1 ? "" : <span>/</span>}
-                  <li key={typeInfo.url}>{typeInfo.name}</li>
-                </>
+                  <li>{typeInfo.name}</li>
+                </React.Fragment>
               ))}
             </ul>
           </section>
