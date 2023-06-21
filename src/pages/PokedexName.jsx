@@ -134,8 +134,8 @@ const PokedexName = () => {
               </figure>
             </div>
           </header>
-          <article className="row-start-4 row-end-13 m-auto flex h-[98%] max-h-[45rem] w-[98%] gap-8 m:max-h-[50rem] 2lg:justify-center max-lg:max-w-[41rem] max-lg:snap-x  max-lg:snap-proximity max-lg:overflow-x-scroll max-lg:overscroll-x-contain max-m:h-[97%]">
-            <header className="flex h-full w-[40rem] max-w-[41rem] flex-col items-center gap-4 border-2 border-gray m:gap-8 max-lg:min-w-full max-lg:snap-center">
+          <article className="row-start-4 row-end-13 m-auto flex h-[98%] max-h-[45rem] w-[98%] gap-8 m:max-h-[50rem] 2lg:justify-center max-lg:max-w-[41rem] max-lg:snap-x max-lg:snap-proximity  max-lg:flex-col max-lg:overflow-x-scroll max-lg:overscroll-x-contain max-m:h-[97%]">
+            <header className="flex h-full w-[31rem] flex-col items-center gap-4 border-2 border-gray p-4 m:min-w-full m:gap-8 max-lg:snap-center max-m:min-w-[70%]">
               <figure
                 className={`bg-${cardColor} w-full`}
                 style={{ backgroundImage: linearGradient }}
@@ -204,7 +204,7 @@ const PokedexName = () => {
                 </div>
               </div>
             </header>
-            <section className="h-full w-[40rem] border-2 border-gray max-lg:min-w-full max-lg:snap-center">
+            <section className="h-full w-[31rem] border-2 border-gray m:min-w-full max-lg:snap-center max-m:min-w-[70%]">
               <div className="flex flex-col gap-8 p-4">
                 <h4 className="text-center text-3xl font-medium m:text-4xl">
                   Stats
@@ -233,10 +233,10 @@ const PokedexName = () => {
                 </ul>
               </div>
             </section>
-            <section className="h-full w-[40rem] border-2 border-gray max-lg:min-w-full max-lg:snap-center">
+            <section className="h-max w-[31rem] border-2 border-gray m:min-w-full max-lg:snap-center max-m:min-w-[70%] ">
               <div className="flex h-full flex-col gap-8 m:gap-12">
                 <h4 className="text-center text-3xl font-medium">Movements</h4>
-                <ul className="flex h-full flex-wrap justify-center gap-4 overflow-x-scroll">
+                <ul className="flex h-full flex-wrap justify-center gap-4 2lg:overflow-y-scroll">
                   {movesPokemon?.map((move) => (
                     <li
                       className="h-12 w-max rounded-3xl bg-gray p-4 m:h-16 m:text-2xl"

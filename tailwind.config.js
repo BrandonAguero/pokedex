@@ -120,7 +120,7 @@ export default {
       "2lg": "1330px",
       "max-lg": { max: "1330px" },
       "max-sm": { max: "599px" },
-      "max-m": { max: "360px" },
+      "max-m": { max: "359px" },
     },
   },
   plugins: [],
