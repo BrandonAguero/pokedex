@@ -123,10 +123,9 @@ const PokedexName = () => {
           <img
             className="w-nine max-w-[35rem] rounded-2xl"
             src="/jpg/sad-picachu.jpg"
-            alt="picachu sad"
           />
           <h1 className="text-center text-2xl text-slate-800 m:text-3xl sm:text-5xl">
-            ✖️ El pokemon <span>{name.toUpperCase()}</span> no existe ✖️
+            ✖️ The Pokémon<span>{name.toUpperCase()}</span> does not exist ✖️
           </h1>
         </div>
       ) : (
@@ -166,13 +165,13 @@ const PokedexName = () => {
               </div>
               <ul className="flex w-4/5 justify-between font-roboto">
                 <li className="flex flex-col items-center">
-                  <span className="m:text-2xl">Peso</span>
+                  <span className="m:text-2xl">Weight</span>
                   <span className="text-3xl font-medium m:text-4xl">
                     {pokemon?.weight}
                   </span>
                 </li>
                 <li className="flex flex-col items-center">
-                  <span className="m:text-2xl">Altura</span>
+                  <span className="m:text-2xl">Height</span>
                   <span className="text-3xl font-medium m:text-4xl">
                     {pokemon?.height}
                   </span>
@@ -181,7 +180,7 @@ const PokedexName = () => {
               <div className="flex w-nine items-center justify-between gap-4 font-roboto">
                 <div className="flex h-full flex-col gap-4">
                   <h4 className="text-center text-4xl font-medium m:text-5xl">
-                    Tipo
+                    Type
                   </h4>
                   <ul className="flex justify-center gap-4">
                     {typesPokemon?.map((type) => (
@@ -196,7 +195,7 @@ const PokedexName = () => {
                 </div>
                 <div className="flex h-full flex-col gap-4">
                   <h4 className="text-center text-4xl font-medium m:text-5xl">
-                    Habilidades
+                    Abilities
                   </h4>
                   <ul className="flex justify-center gap-4">
                     {abilitiesPokemon?.map((ability) => (
@@ -245,7 +244,7 @@ const PokedexName = () => {
             </section>
             <section className="w-[31rem] border-2 border-gray m:min-w-full 2lg:min-w-[31%] max-lg:h-max max-lg:snap-center max-m:min-w-[70%]">
               <div className="flex h-full flex-col gap-8 m:gap-12">
-                <h4 className="text-center text-3xl font-medium">Movements</h4>
+                <h4 className="text-center text-3xl font-medium">Moves</h4>
                 <ul className="flex h-full flex-wrap justify-center gap-4 2lg:overflow-y-scroll">
                   {movesPokemon?.map((move, index) => (
                     <li

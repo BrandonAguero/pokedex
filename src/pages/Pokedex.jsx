@@ -9,7 +9,7 @@ import Select from "react-select";
 const Pokedex = () => {
   const [selectedOption, setSelectedOption] = useState({
     value: "all-pokemons",
-    label: "Todos los pokemones",
+    label: "All pokemons",
   });
 
   const trainerName = useSelector((states) => states.trainerName);
@@ -33,7 +33,7 @@ const Pokedex = () => {
   });
   options?.unshift({
     value: "all-pokemons",
-    label: "Todos los pokemones",
+    label: "All pokemons",
   });
 
   useEffect(() => {
@@ -108,9 +108,9 @@ const Pokedex = () => {
           </figure>
           <div>
             <h2 className="text-center font-inter text-2xl text-titleRed lg:text-4xl">
-              Bienvenido {trainerName},{" "}
+              Welcome {trainerName},{" "}
               <span className="text-paragraph">
-                aquí podrás encontrar tu pokemón favorito
+                here you can find favorite Pokémon
               </span>
             </h2>
           </div>
@@ -123,7 +123,7 @@ const Pokedex = () => {
                 className="phone:w-[26rem] w-[22rem] p-4 text-2xl shadow-lg placeholder:text-2xl placeholder:font-medium focus:outline-button sm:w-[35rem] lg:p-8 lg:text-4xl lg:placeholder:text-4xl"
                 ref={searchPokemon}
                 type="text"
-                placeholder="Busca un pokemón"
+                placeholder="Search for a Pokémon"
                 value={chosenName}
                 onChange={valueNamePokemon}
               />
